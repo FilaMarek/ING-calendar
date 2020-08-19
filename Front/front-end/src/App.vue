@@ -5,10 +5,6 @@
     </div>
 
     <app-home></app-home>
-
-    <div class="test">
-      {{ info }}
-    </div>
   </div>
 </template>
 
@@ -19,8 +15,8 @@ import home from "./components/Home.vue";
 export default {
   components: {
     appMenu: menu,
-    appHome: home
-  }
+    appHome: home,
+  },
 };
 </script>
 

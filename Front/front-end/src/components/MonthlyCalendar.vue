@@ -3,7 +3,7 @@
     <button type="button" class="btn btn-dark">Previous Month</button>
     <button type="button" class="btn btn-dark">Next Month</button>
 
-    <button type="button" class="btn btn-dark" @click="test">test</button>
+    <button type="button" class="btn btn-dark" v-on:click="test">test</button>
 
     <table>
       <tr>
@@ -278,7 +278,25 @@
         <div id="tableButtom6-6" class="tableButtom"></div>
       </td>
     </table>
+    {{ meeting }}
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    test: function (event) {
+      axios
+        .get("http://localhost:3001/today.json")
+        // .then((response) => console.log(response));
+
+        //promise
+
+        .then((response) => (this.meeting = response.data));
+    },
+    data: {
+      meeting: null,
+    },
+  },
+};
+</script>
