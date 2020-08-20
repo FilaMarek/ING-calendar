@@ -34,7 +34,7 @@ app.get("/query.json", function (req, res) {
 
         console.log("Connected!");
 
-        connection.query("SELECT * FROM calendar.calendar limit 5", function (err, result) {
+        connection.query(" SELECT NOW();", function (err, result) {
             connection.release();
             if (err) throw err;
             console.log("Result: " + result);

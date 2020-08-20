@@ -1,6 +1,7 @@
 <template>
   <div class="Home">
     <div class="Today">Today</div>
+
     <div class="calendar">
       <app-calendar></app-calendar>
     </div>
@@ -11,7 +12,7 @@
 import MonthlyCalendar from "./MonthlyCalendar.vue";
 export default {
   components: {
-    appCalendar: MonthlyCalendar,
-  },
+    appCalendar: MonthlyCalendar
+  }
 };
 </script>

@@ -278,25 +278,32 @@
         <div id="tableButtom6-6" class="tableButtom"></div>
       </td>
     </table>
-    {{ meeting }}
+
+    <p>{{ meeting }}</p>
   </div>
 </template>
 
 <script>
 export default {
+  data: () => {
+    return {
+      eltesto: "test",
+      meeting: this.meeting
+    };
+  },
   methods: {
-    test: function (event) {
-      axios
+    async test(event) {
+      await axios
         .get("http://localhost:3001/today.json")
-        // .then((response) => console.log(response));
+        //.then((response) => console.log(response.data[0].cdate));
 
         //promise
 
-        .then((response) => (this.meeting = response.data));
-    },
-    data: {
-      meeting: null,
-    },
-  },
+        .then(response => (this.meeting = response.data[0].cdate));
+
+      console.log(this.meeting);
+      return this.meeting;
+    }
+  }
 };
 </script>

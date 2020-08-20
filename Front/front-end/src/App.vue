@@ -11,12 +11,13 @@
 <script>
 import menu from "./components/menu.vue";
 import home from "./components/Home.vue";
+const regeneratorRuntime = require("regenerator-runtime");
 
 export default {
   components: {
     appMenu: menu,
-    appHome: home,
-  },
+    appHome: home
+  }
 };
 </script>
 
