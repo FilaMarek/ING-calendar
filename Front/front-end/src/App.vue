@@ -16,8 +16,8 @@ const regeneratorRuntime = require("regenerator-runtime");
 export default {
   components: {
     appMenu: menu,
-    appHome: home
-  }
+    appHome: home,
+  },
 };
 </script>
 

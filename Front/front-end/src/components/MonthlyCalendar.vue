@@ -3,8 +3,6 @@
     <button type="button" class="btn btn-dark">Previous Month</button>
     <button type="button" class="btn btn-dark">Next Month</button>
 
-    <button type="button" class="btn btn-dark" v-on:click="test">test</button>
-
     <table>
       <tr>
         <th id="Sun">Sun</th>
@@ -278,8 +276,6 @@
         <div id="tableButtom6-6" class="tableButtom"></div>
       </td>
     </table>
-
-    <p>{{ meeting }}</p>
   </div>
 </template>
 
@@ -287,23 +283,23 @@
 export default {
   data: () => {
     return {
-      eltesto: "test",
-      meeting: this.meeting
+      meeting: this.meeting,
     };
   },
   methods: {
-    async test(event) {
+    async Today(event) {
       await axios
         .get("http://localhost:3001/today.json")
         //.then((response) => console.log(response.data[0].cdate));
 
         //promise
 
-        .then(response => (this.meeting = response.data[0].cdate));
+        .then((response) => (this.meeting = response.data[0].meeting));
 
       console.log(this.meeting);
       return this.meeting;
-    }
-  }
+    },
+  },
+  props: [],
 };
 </script>
