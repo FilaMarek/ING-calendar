@@ -2,6 +2,13 @@ var express = require("express");
 var app = express();
 var db = require("./mysql");
 var cors = require('cors')
+var bodyParser = require('body-parser')
+
+
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+
 
 app.use(cors()) // Use this after the variable declaration
 /*
@@ -59,6 +66,12 @@ app.get("/today.json", function (req, res) {
         });
     });
 });
+
+app.post('/meetings', function (req, res, next) {
+    console.log(req.body)
+    res.json(req.body)
+})
+
 
 
 app.listen(3001);

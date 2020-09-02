@@ -2,8 +2,20 @@
   <div class="Home">
     <div class="Today">Today</div>
     <div class="todaysMeetings">
-      {{meeting}}
-      <button type="button" class="btn btn-dark" v-on:click="Today">test</button>
+      {{meet}}
+      <form @submit.prevent="onSubmit">
+        <div class="input">
+          <label for="date">Date</label>
+          <input type="date" id="date" v-model="date" />
+        </div>
+        <div class="input">
+          <label for="meetingName">Meeting Name</label>
+          <input type="text" id="meetingName" v-model.number="meetingName" />
+        </div>
+        <div class="submit">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
 
     <div class="calendar">
@@ -20,28 +32,46 @@
 
 <script>
 import MonthlyCalendar from "./MonthlyCalendar.vue";
+
 export default {
+  async mounted() {
+    await this.$nextTick();
+    this.Today();
+  },
   components: {
     appCalendar: MonthlyCalendar,
   },
   data: () => {
     return {
-      meeting: this.meeting,
+      meet: this.meeting,
+      date: this.date,
+      meetingName: this.meeting,
     };
   },
   methods: {
-    async Today(event) {
+    async Today() {
       await axios
         .get("http://localhost:3001/today.json")
         //.then((response) => console.log(response.data[0].cdate));
 
         //promise
 
-        .then((response) => (this.meeting = response.data[0].meeting))
-        .catch((err) => (this.meeting = "No meetings today"));
+        .then((response) => (this.meet = response.data[0].meeting))
+        .catch((err) => (this.meet = "No meetings today"));
 
       //console.log(this.meeting);
-      return this.meeting;
+      return this.meet;
+    },
+
+    onSubmit() {
+      const todaysMeeting = {
+        date: this.date,
+        meetingName: this.meetingName,
+        ///meetings
+      };
+      axios
+        .post("http://localhost:3001/meetings", todaysMeeting)
+        .then((res) => console.log(res));
     },
   },
 };
