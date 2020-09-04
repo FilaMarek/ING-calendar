@@ -3,8 +3,6 @@
     <button type="button" class="btn btn-dark">Previous Month</button>
     <button type="button" class="btn btn-dark">Next Month</button>
 
-    <button type="button" class="btn btn-dark" @click="test">test</button>
-
     <table>
       <tr>
         <th id="Sun">Sun</th>
@@ -281,4 +279,27 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data: () => {
+    return {
+      meeting: this.meeting,
+    };
+  },
+  methods: {
+    async Today(event) {
+      await axios
+        .get("http://localhost:3001/today.json")
+        //.then((response) => console.log(response.data[0].cdate));
+
+        //promise
+
+        .then((response) => (this.meeting = response.data[0].meeting));
+
+      console.log(this.meeting);
+      return this.meeting;
+    },
+  },
+  props: [],
+};
+</script>
