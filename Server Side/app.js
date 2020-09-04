@@ -4,7 +4,6 @@ var db = require("./mysql");
 var cors = require('cors')
 var bodyParser = require('body-parser')
 
-
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
@@ -52,11 +51,14 @@ app.get("/query.json", function (req, res) {
 
 
 
+// list of today's meetings
+
 
 app.get("/today.json", function (req, res) {
     pool.getConnection(function (err, connection) {
 
         console.log("Connected!");
+
 
         connection.query("SELECT * FROM calendar.today where date = CURDATE()", function (err, result) {
             connection.release();
@@ -67,9 +69,27 @@ app.get("/today.json", function (req, res) {
     });
 });
 
+
+
+// insert to DB
+
 app.post('/meetings', function (req, res, next) {
-    console.log(req.body)
-    res.json(req.body)
+
+    pool.getConnection(function (err, connection) {
+        var date = req.body.date;
+        var meeting = req.body.meetingName;
+
+        var insertSQL = "INSERT INTO today(date, meeting) VALUES(?, ?);"
+        connection.query(insertSQL, [date, meeting], function (err, result) {
+            if (err) {
+                console.log(err)
+            }
+            console.log(date)
+            console.log(meeting)
+            res.json(req.body)
+            //  })
+        })
+    })
 })
 
 

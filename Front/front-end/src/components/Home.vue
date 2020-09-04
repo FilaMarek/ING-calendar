@@ -59,7 +59,7 @@ export default {
         .then((response) => (this.meet = response.data[0].meeting))
         .catch((err) => (this.meet = "No meetings today"));
 
-      //console.log(this.meeting);
+      console.log(this.meet);
       return this.meet;
     },
 
