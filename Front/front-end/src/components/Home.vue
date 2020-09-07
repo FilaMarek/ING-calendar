@@ -54,7 +54,7 @@ export default {
         .get("http://localhost:3001/today.json")
         //.then((response) => console.log(response.data[0].cdate));
 
-        //promise
+        //promise//
 
         .then((response) => (this.meet = response.data[0].meeting))
         .catch((err) => (this.meet = "No meetings today"));
