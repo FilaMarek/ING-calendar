@@ -1,7 +1,19 @@
 <template>
   <div class="MonthlyCalendar">
-    <button type="button" class="btn btn-dark">Previous Month</button>
-    <button type="button" class="btn btn-dark">Next Month</button>
+    <div class="monthButtons">
+      <div class="right">
+        <button type="button" class="btn btn-dark" v-on:click="test">
+          Previous
+        </button>
+      </div>
+      <div class="middle">
+        <h4>Months</h4>
+      </div>
+
+      <div class="left">
+        <button type="button" class="btn btn-dark">Next</button>
+      </div>
+    </div>
 
     <table>
       <tr>
@@ -283,10 +295,17 @@
 export default {
   data: () => {
     return {
-      meeting: this.meeting,
+      meeting: this.meeting
     };
   },
   methods: {
+    test() {
+      let CurrentDate = new Date();
+      CurrentDate.setMonth(CurrentDate.getMonth() - 1);
+
+      console.log(CurrentDate);
+    },
+
     async Today(event) {
       await axios
         .get("http://localhost:3001/today.json")
@@ -294,12 +313,32 @@ export default {
 
         //promise
 
-        .then((response) => (this.meeting = response.data[0].meeting));
+        .then(response => (this.meeting = response.data[0].meeting));
 
       console.log(this.meeting);
       return this.meeting;
-    },
+    }
   },
-  props: [],
+  props: []
 };
 </script>
+<style>
+.right {
+  float: left;
+  height: 45px;
+}
+
+.left {
+  float: left;
+  height: 45px;
+}
+.middle {
+  float: left;
+  height: 45px;
+}
+.monthButtons {
+  width: 400px;
+  height: 45px;
+  border: 2px solid red;
+}
+</style>

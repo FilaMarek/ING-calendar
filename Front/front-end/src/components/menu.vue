@@ -1,28 +1,31 @@
 <template>
-  <div
-    id="custom-bootstrap-menu"
-    class="navbar navbar-default navbar-static-top"
-    role="navigation"
-  >
+  <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Vue-calendar</a>
+        <a class="navbar-brand" href="#">Calvue</a>
         <button
           type="button"
           class="navbar-toggle"
           data-toggle="collapse"
           data-target=".navbar-menubuilder"
         >
-          <span class="sr-only">Toggle navigation</span
-          ><span class="icon-bar"></span><span class="icon-bar"></span
-          ><span class="icon-bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
       </div>
       <div class="collapse navbar-collapse navbar-menubuilder">
         <ul class="nav navbar-nav navbar-left">
-          <li><a href="/">Home</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/about-us">About Us</a></li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/products">Products</a>
+          </li>
+          <li>
+            <a href="/about-us">About Us</a>
+          </li>
         </ul>
       </div>
     </div>

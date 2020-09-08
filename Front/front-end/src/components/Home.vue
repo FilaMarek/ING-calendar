@@ -76,3 +76,10 @@ export default {
   },
 };
 </script>
+
+
+<style>
+.calendar {
+  width: 500px;
+}
+</style>
