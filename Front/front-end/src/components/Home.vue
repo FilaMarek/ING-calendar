@@ -1,8 +1,15 @@
 <template>
   <div class="Home">
-    <div class="Today">Today</div>
+    <div class="Today">Today's Meetings</div>
+
     <div class="todaysMeetings">
-      {{meet}}
+      <div v-if="this.meet == 'No meetings today'">No meetings today</div>
+      <div v-else>
+        <ul>
+          <li v-for="meeting in meet" :key="meeting.meeting">{{ meeting.meeting }}</li>
+        </ul>
+      </div>
+
       <form @submit.prevent="onSubmit">
         <div class="input">
           <label for="date">Date</label>
@@ -52,14 +59,9 @@ export default {
     async Today() {
       await axios
         .get("http://localhost:3001/today.json")
-        //.then((response) => console.log(response.data[0].cdate));
-
-        //promise
-
-        .then((response) => (this.meet = response.data[0].meeting))
+        .then((response) => (this.meet = response.data))
         .catch((err) => (this.meet = "No meetings today"));
 
-      console.log(this.meet);
       return this.meet;
     },
 
@@ -76,3 +78,10 @@ export default {
   },
 };
 </script>
+
+
+<style>
+.calendar {
+  width: 500px;
+}
+</style>
