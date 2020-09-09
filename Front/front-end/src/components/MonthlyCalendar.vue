@@ -2,9 +2,7 @@
   <div class="MonthlyCalendar">
     <div class="monthButtons">
       <div class="right">
-        <button type="button" class="btn btn-dark" v-on:click="test">
-          Previous
-        </button>
+        <button type="button" class="btn btn-dark" v-on:click="test">Previous</button>
       </div>
       <div class="middle">
         <h4>{{ this.textMonth }}</h4>
@@ -298,57 +296,18 @@ export default {
     return {
       meeting: this.meeting,
       Month: this.Month,
-      textMont: this.textMonth
+      textMont: this.textMonth,
     };
   },
   methods: {
     test() {
       CurrentDate.setMonth(CurrentDate.getMonth() - 1);
       this.Month = CurrentDate.getMonth();
-
-      switch (this.Month) {
-        case 0:
-          this.textMonth = "January ";
-          break;
-        case 1:
-          this.textMonth = "Feburary ";
-          break;
-        case 2:
-          this.textMonth = "March ";
-          break;
-        case 3:
-          this.textMonth = "April ";
-          break;
-        case 4:
-          this.textMonth = "May ";
-          break;
-        case 5:
-          this.textMonth = "June ";
-          break;
-        case 6:
-          this.textMonth = "July ";
-          break;
-        case 7:
-          this.textMonth = "August ";
-          break;
-        case 8:
-          this.textMonth = "September ";
-          break;
-        case 9:
-          this.textMonth = "October ";
-          break;
-
-        case 10:
-          this.textMonth = "November ";
-          break;
-
-        case 11:
-          this.textMonth = "December ";
-      }
+      this.textMonth = date.toLocaleString("default", { month: "long" });
 
       //console.log(CurrentDate.getMonth());
       console.log(this.Month);
-      return this.Month;
+      return this.textMonth;
     },
 
     async Today(event) {
@@ -358,13 +317,13 @@ export default {
 
         //promise
 
-        .then(response => (this.meeting = response.data[0].meeting));
+        .then((response) => (this.meeting = response.data[0].meeting));
 
       console.log(this.meeting);
       return this.meeting;
-    }
+    },
   },
-  props: []
+  props: [],
 };
 </script>
 <style>
