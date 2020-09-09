@@ -7,7 +7,7 @@
         </button>
       </div>
       <div class="middle">
-        <h4>Months</h4>
+        <h4>{{ this.textMonth }}</h4>
       </div>
 
       <div class="left">
@@ -292,18 +292,63 @@
 </template>
 
 <script>
+let CurrentDate = new Date();
 export default {
   data: () => {
     return {
-      meeting: this.meeting
+      meeting: this.meeting,
+      Month: this.Month,
+      textMont: this.textMonth
     };
   },
   methods: {
     test() {
-      let CurrentDate = new Date();
       CurrentDate.setMonth(CurrentDate.getMonth() - 1);
+      this.Month = CurrentDate.getMonth();
 
-      console.log(CurrentDate);
+      switch (this.Month) {
+        case 0:
+          this.textMonth = "January ";
+          break;
+        case 1:
+          this.textMonth = "Feburary ";
+          break;
+        case 2:
+          this.textMonth = "March ";
+          break;
+        case 3:
+          this.textMonth = "April ";
+          break;
+        case 4:
+          this.textMonth = "May ";
+          break;
+        case 5:
+          this.textMonth = "June ";
+          break;
+        case 6:
+          this.textMonth = "July ";
+          break;
+        case 7:
+          this.textMonth = "August ";
+          break;
+        case 8:
+          this.textMonth = "September ";
+          break;
+        case 9:
+          this.textMonth = "October ";
+          break;
+
+        case 10:
+          this.textMonth = "November ";
+          break;
+
+        case 11:
+          this.textMonth = "December ";
+      }
+
+      //console.log(CurrentDate.getMonth());
+      console.log(this.Month);
+      return this.Month;
     },
 
     async Today(event) {
