@@ -2,10 +2,10 @@
   <div class="MonthlyCalendar">
     <div class="monthButtons">
       <div class="right">
-        <button type="button" class="btn btn-dark" v-on:click="test">Previous</button>
+        <button type="button" class="btn btn-dark" v-on:click="previouse">Previous</button>
       </div>
       <div class="middle">
-        <h4>{{ this.Month }}</h4>
+        <h4>{{ this.Month }} {{ calendarYear }}</h4>
       </div>
 
       <div class="left">
@@ -293,18 +293,22 @@
 let CurrentDate = new Date();
 export default {
   mounted: function () {
-    this.testo1();
+    this.loadingFunction();
   },
 
   data: () => {
     return {
       meeting: this.meeting,
       Month: this.Month,
+      calendarYear: this.calendarYear,
     };
   },
   methods: {
-    test() {
+    previouse() {
       CurrentDate.setMonth(CurrentDate.getMonth() - 1);
+      this.calendarYear = CurrentDate.getFullYear();
+      // console.log(CurrentDate);
+
       this.Month = CurrentDate.toLocaleString("en", {
         month: "long",
       });
@@ -312,13 +316,18 @@ export default {
       //console.log(CurrentDate.getMonth());
       return this.Month;
     },
-    testo1() {
+
+    /// on LOAD!!!!
+    loadingFunction() {
+      this.calendarYear = CurrentDate.getFullYear();
+      // console.log(this.calendarYear);
+
       CurrentDate.setMonth(CurrentDate.getMonth());
       this.Month = CurrentDate.toLocaleString("en", {
         month: "long",
       });
+      // console.log(this.Month);
 
-      //console.log(CurrentDate.getMonth());
       return this.Month;
     },
   },

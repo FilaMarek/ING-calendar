@@ -3,10 +3,12 @@
     <div class="Today">Today's Meetings</div>
 
     <div class="todaysMeetings">
-      <div v-if="this.meet == 'No meetings today'">No meetings today</div>
+      <div v-if="this.meet.length == '0'">No meetings today</div>
       <div v-else>
         <ul>
-          <li v-for="meeting in meet" :key="meeting.meeting">{{ meeting.meeting }}</li>
+          <li v-for="meeting in meet" :key="meeting.meeting">
+            {{ meeting.meeting }}
+          </li>
         </ul>
       </div>
 
@@ -58,9 +60,11 @@ export default {
   methods: {
     async Today() {
       await axios
-        .get("http://localhost:3001/today.json")
+        .get("https://floating-peak-36344.herokuapp.com/today.json")
         .then((response) => (this.meet = response.data))
-        .catch((err) => (this.meet = "No meetings today"));
+        .catch((err) => (this.meet = "error no databes connection "));
+
+      console.log(this.meet.length);
 
       return this.meet;
     },
@@ -72,7 +76,10 @@ export default {
         ///meetings
       };
       axios
-        .post("http://localhost:3001/meetings", todaysMeeting)
+        .post(
+          "https://floating-peak-36344.herokuapp.com/meetings",
+          todaysMeeting
+        )
         .then((res) => console.log(res));
     },
   },

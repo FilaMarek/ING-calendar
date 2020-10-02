@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var db = require("./mysql");
+//var db = require("./mysql");
 var cors = require('cors')
 var bodyParser = require('body-parser')
 
@@ -40,7 +40,7 @@ app.get("/query.json", function (req, res) {
 
         console.log("Connected!");
 
-        connection.query(" SELECT NOW();", function (err, result) {
+        connection.query("SELECT NOW();", function (err, result) {
             connection.release();
             if (err) throw err;
             console.log("Result: " + result);
@@ -94,4 +94,7 @@ app.post('/meetings', function (req, res, next) {
 
 
 
-app.listen(3001);
+var port = process.env.PORT || 3001;
+app.listen(port, function () {
+    console.log("Listening on " + port);
+});
