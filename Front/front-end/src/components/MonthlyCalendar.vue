@@ -365,12 +365,13 @@ export default {
     next() {
       CurrentDate.setMonth(CurrentDate.getMonth() + 1);
       this.calendarYear = CurrentDate.getFullYear();
-
+      this.tempMonth = CurrentDate.getMonth();
       this.Month = CurrentDate.toLocaleString("en", {
         month: "long",
       });
-      this.monthLayout();
 
+      this.monthLayout();
+      //console.log(CurrentDate);
       return this.Month;
     },
 
@@ -385,21 +386,36 @@ export default {
 
       return this.Month;
     },
+
+    Monthclear() {
+      for (let w = 1; w <= 6; w++) {
+        for (let d = 0; d <= 6; d++) {
+          this["week" + w + "d" + d] = "";
+        }
+      }
+    },
+
     monthLayout() {
-      let tempDate = new Date();
+      this.Monthclear();
+      let tempDate = CurrentDate;
+      const actualMonth = CurrentDate.getMonth();
       tempDate.setDate(1);
       let firstMonthDay = tempDate.getDate();
       let weekDay = tempDate.getDay();
       for (let w = 1; w <= 6; w++) {
         for (let d = weekDay; d <= 6; d++) {
-          console.log("week" + w + "d" + d);
-
-          this["week" + w + "d" + d] = tempDate.getDate();
-          tempDate.setDate(tempDate.getDate() + 1);
-          //console.log(tempDate.getDate());
+          if (actualMonth == tempDate.getMonth()) {
+            this["week" + w + "d" + d] = tempDate.getDate();
+            tempDate.setDate(tempDate.getDate() + 1);
+          } else {
+            break;
+          }
         }
         weekDay = 0;
       }
+      tempDate.setMonth(tempDate.getMonth() - 1);
+      tempDate.setDate(1);
+      // console.log("tempdate " + tempDate);
     },
   },
   computed: {},
