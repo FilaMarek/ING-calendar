@@ -64,7 +64,8 @@ export default {
         .then((response) => (this.meet = response.data))
         .catch((err) => (this.meet = "error no databes connection "));
 
-      console.log(this.meet.length);
+     // console.log(this.meet.length);
+
 
       return this.meet;
     },
@@ -75,12 +76,25 @@ export default {
         meetingName: this.meetingName,
         ///meetings
       };
+
+if(!todaysMeeting.meetingName || !todaysMeeting.date)
+{
+  alert("Please fill out the name and date of the meeting")
+}
+else{
+
       axios
         .post(
           "https://floating-peak-36344.herokuapp.com/meetings",
           todaysMeeting
         )
-        .then((res) => console.log(res));
+        .then((res) => console.log("done"));
+
+}
+
+
+
+        
     },
   },
 };
