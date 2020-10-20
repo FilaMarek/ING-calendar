@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <div class="Today">Today's Meetings</div>
+    <div class="Today">Today's Meetings:</div>
 
     <div class="todaysMeetings">
       <div v-if="this.meet.length == '0'">No meetings today</div>
@@ -22,7 +22,7 @@
           <input type="text" id="meetingName" v-model.number="meetingName" />
         </div>
         <div class="submit">
-          <button type="submit">Submit</button>
+          <button type="submit"  class ="btn">Submit</button>
         </div>
       </form>
     </div>
@@ -89,12 +89,8 @@ else{
           todaysMeeting
         )
         .then((res) => console.log("done"));
-
 }
 
-
-
-        
     },
   },
 };
