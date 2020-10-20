@@ -10,8 +10,8 @@
 }
 
 .Today {
-  width: 75%;
-  border-style: solid;
+  width: 74%;
+  font-weight: bold;
   border-width: 3px;
   float: left;
 }

@@ -34,7 +34,7 @@
 
 <style>
 #custom-bootstrap-menu.navbar-default .navbar-brand {
-  color: rgba(51, 51, 51, 1);
+  color: rgba(255, 98, 0);
 }
 #custom-bootstrap-menu.navbar-default {
   font-size: 14px;
@@ -51,13 +51,13 @@
   background-color: rgba(194, 194, 194, 1);
   background: -webkit-linear-gradient(
     top,
-    rgba(102, 102, 102, 1) 0%,
-    rgba(194, 194, 194, 1) 100%
+    rgba(255, 98, 0) 0%,
+    rgb(255, 255, 255) 100%
   );
   background: linear-gradient(
     to bottom,
-    rgba(102, 102, 102, 1) 0%,
-    rgba(194, 194, 194, 1) 100%
+    rgba(255, 98, 0) 0%,
+    rgb(255, 255, 255) 100%
   );
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,

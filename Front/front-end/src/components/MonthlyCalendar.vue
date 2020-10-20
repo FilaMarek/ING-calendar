@@ -2,7 +2,7 @@
   <div class="MonthlyCalendar">
     <div class="monthButtons">
       <div class="right">
-        <button type="button" class="btn btn-dark" v-on:click="previouse">
+        <button type="button" class="btn" v-on:click="previouse">
           Previous
         </button>
       </div>
@@ -11,7 +11,7 @@
       </div>
 
       <div class="left">
-        <button type="button" class="btn btn-dark" v-on:click="next">
+        <button type="button" class="btn" v-on:click="next">
           Next
         </button>
       </div>
@@ -1178,25 +1178,53 @@ arrayMeeting
 <style>
 .right {
   float: left;
-  height: 45px;
+  width: 100px;
+  height: 5px;
+  margin: 0;
+  padding-top: 0px;
+
 }
 
 .left {
-  float: left;
-  height: 45px;
+  width: 100px;
+  height: 5px;
+  margin: 0;
+  padding-top: 0px;
+  margin-left: 330px;
+ 
+
 }
 .middle {
   float: left;
+  padding-left: 40px;
   height: 45px;
+  
+  
 }
 .monthButtons {
   width: 400px;
   height: 45px;
-  border: 2px solid red;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 ul {
   list-style-type: none; /* Remove bullets */
+
+}
+
+.btn:hover{
+  background: rgb(194, 75, 1);
+  color:white;
+
+}
+
+.btn{
+  background: rgba(255, 98, 0);
+  color:white;
 
 }
 
