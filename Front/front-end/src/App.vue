@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-    <div class="menu">
       <app-menu></app-menu>
-    </div>
-
-    <app-home></app-home>
+      <app-home></app-home>
   </div>
 </template>
 

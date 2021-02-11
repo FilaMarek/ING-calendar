@@ -41,7 +41,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
           </div>
           <div id="tableButtom1-0" class="tableButtom"></div>
@@ -49,7 +49,7 @@
         <td>
           <!-- week 1 MON -->
           <div id="tableTop1-1" class="tableTop">{{ week1d1 }}</div>
-          <div id="tableMiddle1-1" class="tableMiddle"> 
+          <div id="tableMiddle1-1" class="tableMiddle">
 
 
         <div v-if="this.week1d1Meeting == 'undefined'"></div>
@@ -60,7 +60,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
           </div>
           <div id="tableButtom1-1" class="tableButtom"></div>
@@ -78,7 +78,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
           </div>
           <div id="tableButtom1-2" class="tableButtom"></div>
@@ -87,8 +87,8 @@
           <!-- week 1 WED -->
           <div id="tableTop1-3" class="tableTop">{{ week1d3 }}</div>
           <div id="tableMiddle1-3" class="tableMiddle">
-            
-   
+
+
          <div v-if="this.week1d3Meeting == 'undefined'"></div>
         <div v-else if ="this.week1d3Meeting.length == '0'"></div>
         <div else>
@@ -97,7 +97,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -108,7 +108,7 @@
         <td>
           <!-- week 1 THU -->
           <div id="tableTop1-4" class="tableTop">{{ week1d4 }}</div>
-          <div id="tableMiddle1-4" class="tableMiddle">  
+          <div id="tableMiddle1-4" class="tableMiddle">
 
         <div v-if="this.week1d4Meeting == 'undefined'"></div>
         <div v-else if="this.week1d4Meeting.length == '0'"></div>
@@ -118,7 +118,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 </div>
@@ -127,8 +127,8 @@
         <td>
           <!-- week 1 FRI -->
           <div id="tableTop1-5" class="tableTop">{{ week1d5 }}</div>
-          <div id="tableMiddle1-5" class="tableMiddle">            
-   
+          <div id="tableMiddle1-5" class="tableMiddle">
+
         <div v-if="this.week1d5Meeting == 'undefined'"></div>
         <div v-else if ="this.week1d5Meeting.length == '0'"></div>
         <div else>
@@ -137,7 +137,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 </div>
           <div id="tableButtom1-5" class="tableButtom"></div>
@@ -146,7 +146,7 @@
           <!-- week 1 SAT -->
           <div id="tableTop1-6" class="tableTop">{{ week1d6 }}</div>
           <div id="tableMiddle1-6" class="tableMiddle">
-            
+
 
         <div v-if="this.week1d6Meeting == 'undefined'"></div>
         <div v-else if ="this.week1d6Meeting.length == '0'"></div>
@@ -156,7 +156,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
           </div>
@@ -178,7 +178,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
           </div>
@@ -199,7 +199,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
           </div>
@@ -221,7 +221,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -244,11 +244,11 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
-            
+
           </div>
           <div id="tableButtom2-3" class="tableButtom"></div>
         </td>
@@ -265,7 +265,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -286,7 +286,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -307,10 +307,10 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
-            
+
           </div>
           <div id="tableButtom2-6" class="tableButtom"></div>
         </td>
@@ -331,7 +331,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
           </div>
@@ -341,7 +341,7 @@
           <!-- week 3 MON -->
           <div id="tableTop3-1" class="tableTop">{{ week3d1 }}</div>
           <div id="tableMiddle3-1" class="tableMiddle">
-            
+
         <div v-if="this.week3d1Meeting == 'undefined'"></div>
         <div v-else if ="this.week3d1Meeting.length == '0'"></div>
         <div else>
@@ -350,7 +350,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -362,8 +362,8 @@
           <!-- week 3 TUES -->
           <div id="tableTop3-2" class="tableTop">{{ week3d2 }}</div>
           <div id="tableMiddle3-2" class="tableMiddle">
-            
-            
+
+
         <div v-if="this.week3d2Meeting == 'undefined'"></div>
         <div v-else if ="this.week3d2Meeting.length == '0'"></div>
         <div else>
@@ -372,7 +372,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -383,9 +383,9 @@
           <!-- week 3 WED -->
           <div id="tableTop3-3" class="tableTop">{{ week3d3 }}</div>
           <div id="tableMiddle3-3" class="tableMiddle">
-            
-            
-            
+
+
+
         <div v-if="this.week3d3Meeting == 'undefined'"></div>
         <div v-else if ="this.week3d3Meeting.length == '0'"></div>
         <div else>
@@ -394,7 +394,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
           </div>
@@ -405,7 +405,7 @@
           <div id="tableTop3-4" class="tableTop">{{ week3d4 }}</div>
           <div id="tableMiddle3-4" class="tableMiddle">
 
-            
+
         <div v-if="this.week3d4Meeting == 'undefined'"></div>
         <div v-else if ="this.week3d4Meeting.length == '0'"></div>
         <div else>
@@ -414,7 +414,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
           </div>
           <div id="tableButtom3-4" class="tableButtom"></div>
@@ -424,7 +424,7 @@
           <div id="tableTop3-5" class="tableTop">{{ week3d5 }}</div>
           <div id="tableMiddle3-5" class="tableMiddle">
 
-            
+
         <div v-if="this.week3d5Meeting == 'undefined'"></div>
         <div v-else if ="this.week3d5Meeting.length == '0'"></div>
         <div else>
@@ -433,7 +433,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -444,8 +444,8 @@
           <!-- week 3 SAT -->
           <div id="tableTop3-6" class="tableTop">{{ week3d6 }}</div>
           <div id="tableMiddle3-6" class="tableMiddle">
-            
-            
+
+
         <div v-if="this.week3d6Meeting == 'undefined'"></div>
         <div v-else if ="this.week3d6Meeting.length == '0'"></div>
         <div else>
@@ -454,7 +454,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -469,7 +469,7 @@
           <div id="tableMiddle4-0" class="tableMiddle">
 
 
-            
+
         <div v-if="this.week4d0Meeting == 'undefined'"></div>
         <div v-else if ="this.week4d0Meeting.length == '0'"></div>
         <div else>
@@ -478,7 +478,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -491,7 +491,7 @@
           <div id="tableTop4-1" class="tableTop">{{ week4d1 }}</div>
           <div id="tableMiddle4-1" class="tableMiddle">
 
-            
+
         <div v-if="this.week4d1Meeting == 'undefined'"></div>
         <div v-else if ="this.week4d1Meeting.length == '0'"></div>
         <div else>
@@ -500,7 +500,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -512,7 +512,7 @@
           <div id="tableTop4-2" class="tableTop">{{ week4d2 }}</div>
           <div id="tableMiddle4-2" class="tableMiddle">
 
-            
+
         <div v-if="this.week4d2Meeting == 'undefined'"></div>
         <div v-else if ="this.week4d2Meeting.length == '0'"></div>
         <div else>
@@ -521,7 +521,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -533,7 +533,7 @@
           <div id="tableTop4-3" class="tableTop">{{ week4d3 }}</div>
           <div id="tableMiddle4-3" class="tableMiddle">
 
-            
+
         <div v-if="this.week4d3Meeting == 'undefined'"></div>
         <div v-else if ="this.week4d3Meeting.length == '0'"></div>
         <div else>
@@ -542,7 +542,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -555,7 +555,7 @@
           <div id="tableMiddle4-4" class="tableMiddle">
 
 
-            
+
         <div v-if="this.week4d4Meeting == 'undefined'"></div>
         <div v-else if ="this.week4d4Meeting.length == '0'"></div>
         <div else>
@@ -564,7 +564,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -577,7 +577,7 @@
           <div id="tableMiddle4-5" class="tableMiddle">
 
 
-            
+
         <div v-if="this.week4d5Meeting == 'undefined'"></div>
         <div v-else if ="this.week4d5Meeting.length == '0'"></div>
         <div else>
@@ -586,7 +586,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -599,7 +599,7 @@
           <div id="tableMiddle4-6" class="tableMiddle">
 
 
-            
+
         <div v-if="this.week4d6Meeting == 'undefined'"></div>
         <div v-else if ="this.week4d6Meeting.length == '0'"></div>
         <div else>
@@ -608,7 +608,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -624,7 +624,7 @@
           <div id="tableMiddle5-0" class="tableMiddle">
 
 
-            
+
         <div v-if="this.week5d0Meeting == 'undefined'"></div>
         <div v-else if ="this.week5d0Meeting.length == '0'"></div>
         <div else>
@@ -633,7 +633,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -645,7 +645,7 @@
           <div id="tableTop5-1" class="tableTop">{{ week5d1 }}</div>
           <div id="tableMiddle5-1" class="tableMiddle">
 
-           
+
         <div v-if="this.week5d1Meeting == 'undefined'"></div>
         <div v-else if ="this.week5d1Meeting.length == '0'"></div>
         <div else>
@@ -654,7 +654,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -666,7 +666,7 @@
           <div id="tableTop5-2" class="tableTop">{{ week5d2 }}</div>
           <div id="tableMiddle5-2" class="tableMiddle">
 
-           
+
         <div v-if="this.week5d2Meeting == 'undefined'"></div>
         <div v-else if ="this.week5d2Meeting.length == '0'"></div>
         <div else>
@@ -675,7 +675,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -688,7 +688,7 @@
           <div id="tableTop5-3" class="tableTop">{{ week5d3 }}</div>
           <div id="tableMiddle5-3" class="tableMiddle">
 
-          
+
         <div v-if="this.week5d3Meeting == 'undefined'"></div>
         <div v-else if ="this.week5d3Meeting.length == '0'"></div>
         <div else>
@@ -697,10 +697,10 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
-            
+
           </div>
           <div id="tableButtom5-3" class="tableButtom"></div>
         </td>
@@ -710,7 +710,7 @@
           <div id="tableMiddle5-4" class="tableMiddle">
 
 
-          
+
         <div v-if="this.week5d4Meeting == 'undefined'"></div>
         <div v-else if ="this.week5d4Meeting.length == '0'"></div>
         <div else>
@@ -719,7 +719,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -731,7 +731,7 @@
           <div id="tableTop5-5" class="tableTop">{{ week5d5 }}</div>
           <div id="tableMiddle5-5" class="tableMiddle">
 
-         
+
         <div v-if="this.week5d5Meeting == 'undefined'"></div>
         <div v-else if ="this.week5d5Meeting.length == '0'"></div>
         <div else>
@@ -740,7 +740,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -752,7 +752,7 @@
           <div id="tableTop5-6" class="tableTop">{{ week5d6 }}</div>
           <div id="tableMiddle5-6" class="tableMiddle">
 
-         
+
         <div v-if="this.week5d6Meeting == 'undefined'"></div>
         <div v-else if ="this.week5d6Meeting.length == '0'"></div>
         <div else>
@@ -761,7 +761,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -782,7 +782,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -802,7 +802,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
         </div>
@@ -822,7 +822,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -845,7 +845,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -867,7 +867,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -891,7 +891,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -914,7 +914,7 @@
             {{ meetings }}
           </li>
         </ul>
-      </div> 
+      </div>
 
 
 
@@ -933,20 +933,16 @@ export default {
     await this.$nextTick();
     this.thisMonths();
 
-    
-
     },
   mounted: function () {
     this.loadingFunction();
     this.monthLayout();
     this.meetingtocal();
   },
-
   data: () => {
     return {
       meet: this.meeting,
       meetingName: this.meeting,
-
       meeting: this.meeting,
       Month: this.Month,
       calendarYear: this.calendarYear,
@@ -1039,10 +1035,42 @@ export default {
   },
   methods: {
 // today's meeting
+
+async thisMonths(){
+
+  const CurrentConvertedMonth = {
+        year: CurrentDate.getFullYear(),
+        month: CurrentDate.getMonth() + 1 ,
+        day: CurrentDate.getDay(),
+        }
+
+      console.log(CurrentConvertedMonth);
+
+       await axios
+        .post(
+          "http://localhost:3001/monthMeetings2",
+          CurrentConvertedMonth
+        )
+        //.then((response) => console.log(response.data))
+        .then((response) => (this.meet = response.data))
+        .catch((err) => (this.meet = "error no databes connection "));
+
+         arrayMeeting = [];
+         for(let i = 0; i <this.meet.length; i++) {
+     arrayMeeting.push(this.meet[i].date.slice(8, 10));
+     arrayMeeting.push(this.meet[i].meeting);
+       this.meetingtocal();
+   }
+    console.log(arrayMeeting)
+},
+
+
+/////
+/*
    async thisMonths() {
       await axios
-    
-        .get("https://floating-peak-36344.herokuapp.com/monthMeetings")
+
+        .get("http://localhost:3001/monthMeetings")
         .then((response) => (this.meet = response.data))
         .catch((err) => (this.meet = "error no databes connection "));
       // console.log(this.meet.length);
@@ -1051,23 +1079,25 @@ export default {
     for(let i = 0; i <this.meet.length; i++) {
      arrayMeeting.push(this.meet[i].date.slice(8, 10));
      arrayMeeting.push(this.meet[i].meeting);
-    // 
+    //
     this.meetingtocal();
     }
 //console.log(arrayMeeting)
 return arrayMeeting;
    },
 
+   */
+
 meetingtocal(){
 //      week3d4Meeting: this.week3d4Meeting,
 arrayMeeting
-  
+
       let tempDate = CurrentDate;
       const actualMonth = CurrentDate.getMonth();
       tempDate.setDate(1);
       let firstMonthDay = tempDate.getDate();
       let weekDay = tempDate.getDay();
-      
+
       for (let w = 1; w <= 6; w++) {
         for (let d = weekDay; d <= 6; d++) {
           this["week" + w + "d" + d+ "Meeting"] = [];
@@ -1075,17 +1105,15 @@ arrayMeeting
               // to wypluwa aray tyle razy ile jest dni w miesiącu
               for(let x=0; x<arrayMeeting.length;x++){
                 if(tempDate.getDate() == arrayMeeting[x] &&  tempDate.getDate() == this["week" + w + "d" + d])
-                {            
-                  
+                {
+
                             this["week" + w + "d" + d+ "Meeting"].push(arrayMeeting[x+1])
                             //console.log(tempDate.getDate())
                            // console.log( "week" + w + "d" + d+ "Meeting " + this["week" + w + "d" + d+ "Meeting"])
                            // console.log(this["week" + w + "d" + d+ "Meeting"])
                 }
-                
+
               }
-
-
             //this["week" + w + "d" + d + 'Meeting'] = tempDate.getDate();
             tempDate.setDate(tempDate.getDate() + 1);
           } else {
@@ -1094,26 +1122,20 @@ arrayMeeting
             break;
           }
         }
-     
+
         weekDay = 0;
       }
       tempDate.setMonth(tempDate.getMonth() - 1);
       tempDate.setDate(1);
-    
 
 },
-
-
-
     previouse() {
       CurrentDate.setMonth(CurrentDate.getMonth() - 1);
       this.calendarYear = CurrentDate.getFullYear();
-
       this.Month = CurrentDate.toLocaleString("en", {
         month: "long",
       });
       this.monthLayout();
-
       return this.Month;
     },
     next() {
@@ -1124,21 +1146,19 @@ arrayMeeting
         month: "long",
       });
       this.monthLayout();
+      this.currentMonthCalendar();
       //console.log(CurrentDate);
       return this.Month;
     },
     /// on LOAD!!!!
     loadingFunction() {
       this.calendarYear = CurrentDate.getFullYear();
-
       CurrentDate.setMonth(CurrentDate.getMonth());
       this.Month = CurrentDate.toLocaleString("en", {
         month: "long",
       });
-
       return this.Month;
     },
-
     Monthclear() {
       for (let w = 1; w <= 6; w++) {
         for (let d = 0; d <= 6; d++) {
@@ -1147,7 +1167,6 @@ arrayMeeting
         }
       }
     },
-
     monthLayout() {
       this.Monthclear();
       this.thisMonths();
@@ -1182,24 +1201,21 @@ arrayMeeting
   height: 5px;
   margin: 0;
   padding-top: 0px;
-
 }
-
 .left {
   width: 100px;
   height: 5px;
   margin: 0;
   padding-top: 0px;
   margin-left: 330px;
- 
 
 }
 .middle {
   float: left;
   padding-left: 40px;
   height: 45px;
-  
-  
+
+
 }
 .monthButtons {
   width: 400px;
@@ -1208,24 +1224,16 @@ arrayMeeting
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
-
 ul {
   list-style-type: none; /* Remove bullets */
-
 }
-
 .btn:hover{
   background: rgb(194, 75, 1);
   color:white;
-
 }
-
 .btn{
   background: rgba(255, 98, 0);
   color:white;
-
 }
-
 </style>
