@@ -1,8 +1,8 @@
 <template>
   <div class="MonthlyCalendar">
     <div class="monthButtons">
-      <div class="right">
-        <button type="button" class="btn" v-on:click="previouse">
+      <div class="right" v-cloak>
+        <button type="button" class="btn" :disabled="disabled" v-on:click="previouse">
           Previous
         </button>
       </div>
@@ -11,7 +11,7 @@
       </div>
 
       <div class="left">
-        <button type="button" class="btn" v-on:click="next">
+        <button type="button"  class="btn"  :disabled="disabled" v-on:click="next">
           Next
         </button>
       </div>
@@ -938,9 +938,14 @@ export default {
     this.loadingFunction();
     this.monthLayout();
     this.meetingtocal();
+    this.enable();
+    this.disable();
   },
   data: () => {
     return {
+        disabled: false,
+        timeout: null,
+
       meet: this.meeting,
       meetingName: this.meeting,
       meeting: this.meeting,
@@ -1044,11 +1049,11 @@ async thisMonths(){
         day: CurrentDate.getDay(),
         }
 
-      console.log(CurrentConvertedMonth);
+     // console.log(CurrentConvertedMonth);
 
        await axios
         .post(
-          "http://localhost:3001/monthMeetings2",
+          "https://floating-peak-36344.herokuapp.com/monthMeetings2",
           CurrentConvertedMonth
         )
         //.then((response) => console.log(response.data))
@@ -1059,9 +1064,22 @@ async thisMonths(){
          for(let i = 0; i <this.meet.length; i++) {
      arrayMeeting.push(this.meet[i].date.slice(8, 10));
      arrayMeeting.push(this.meet[i].meeting);
+
        this.meetingtocal();
    }
-    console.log(arrayMeeting)
+   this.enable()
+
+
+    //console.log(arrayMeeting)
+},
+
+enable(){
+
+        this.disabled = false;
+},
+disable(){
+
+        this.disabled = true;
 },
 
 
@@ -1117,7 +1135,7 @@ arrayMeeting
             //this["week" + w + "d" + d + 'Meeting'] = tempDate.getDate();
             tempDate.setDate(tempDate.getDate() + 1);
           } else {
-            console.log("not working")
+           // console.log("not working")
             //console.log(arrayMeeting  )
             break;
           }
@@ -1130,6 +1148,7 @@ arrayMeeting
 
 },
     previouse() {
+      this.disable();
       CurrentDate.setMonth(CurrentDate.getMonth() - 1);
       this.calendarYear = CurrentDate.getFullYear();
       this.Month = CurrentDate.toLocaleString("en", {
@@ -1139,6 +1158,7 @@ arrayMeeting
       return this.Month;
     },
     next() {
+       this.disable();
       CurrentDate.setMonth(CurrentDate.getMonth() + 1);
       this.calendarYear = CurrentDate.getFullYear();
       this.tempMonth = CurrentDate.getMonth();
@@ -1146,8 +1166,7 @@ arrayMeeting
         month: "long",
       });
       this.monthLayout();
-      this.currentMonthCalendar();
-      //console.log(CurrentDate);
+      //this.currentMonthCalendar();
       return this.Month;
     },
     /// on LOAD!!!!
@@ -1236,4 +1255,8 @@ ul {
   background: rgba(255, 98, 0);
   color:white;
 }
+
+
+
+
 </style>
