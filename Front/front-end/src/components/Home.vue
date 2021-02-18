@@ -71,18 +71,23 @@ export default {
         meetingName: this.meetingName,
         ///meetings
       };
-if(!todaysMeeting.meetingName || !todaysMeeting.date)
-{
-  alert("Please fill out the name and date of the meeting")
-}
-else{
-      axios
-        .post(
-          "https://floating-peak-36344.herokuapp.com/meetings",
-          todaysMeeting
-        )
-        .then((res) => console.log("done"));
-}
+        if(!todaysMeeting.meetingName || !todaysMeeting.date)
+        {
+          alert("Please fill out the name and date of the meeting")
+        }
+        else{
+              axios
+                .post(
+                  "https://floating-peak-36344.herokuapp.com/meetings",
+                  todaysMeeting
+                )
+                .then((res) => console.log("done"));
+        }
+          // clear data
+          this.meetingName = "";
+          alert("Thank you for testing my website it is currently work in progress as I learn more and more. I am aware of many bugs yett to be fixed.");
+
+
     },
   },
 };
