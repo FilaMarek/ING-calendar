@@ -16,11 +16,7 @@ app.use(cors()) // Use this after the variable declaration
 
 
 var pool = mysql.createPool({
-    connectionLimit: 10, // default = 10
-    host: 'us-cdbr-east-02.cleardb.com',
-    user: 'b4546435e0b9bc',
-    password: 'aaadbfe5',
-    database: 'heroku_5ebefb60c94ae76'
+
 });
 
 
@@ -52,7 +48,7 @@ app.get("/monthMeetings", function (req, res) {
         console.log("Connected!");
 
 
-        connection.query("SELECT * FROM heroku_5ebefb60c94ae76.today where date LIKE '2020-12%'", function (err, result) {
+        connection.query("SELECT * FROM h*****6.today where date LIKE '2020-12%'", function (err, result) {
             connection.release();
             if (err) throw err;
             console.log("Result: " + result);
@@ -75,7 +71,7 @@ app.get("   ", function (req, res) {
         console.log("Connected!");
 
 
-        connection.query("SELECT * FROM heroku_5ebefb60c94ae76.today where date = CURDATE()", function (err, result) {
+        connection.query("SELECT * FROM h*****6.today where date = CURDATE()", function (err, result) {
             connection.release();
             if (err) throw err;
             console.log("Result: " + result);
@@ -95,7 +91,7 @@ app.post('/CurrentMonthMeetings', function (req, res, next) {
         CalendarMonth = req.body.month;
         CalendarDay = req.body.day;
 
-        connection.query("SELECT * FROM heroku_5ebefb60c94ae76.today WHERE date BETWEEN " + CalendarYear + "-" + CalendarMonth + "- 01" + " AND " + CalendarYear + "-" + CalendarMonth + "- 31", function (err, result) {
+        connection.query("SELECT * FROM h*****.today WHERE date BETWEEN " + CalendarYear + "-" + CalendarMonth + "- 01" + " AND " + CalendarYear + "-" + CalendarMonth + "- 31", function (err, result) {
             if (err) {
                 console.log(err)
             }
